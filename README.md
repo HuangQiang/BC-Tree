@@ -1,10 +1,10 @@
 # Lightweight-Yet-Efficient: Revitalizing Ball-Tree for Point-to-Hyperplane Nearest Neighbor Search
 
-In this github, we implement **Ball-Tree** and **BC-Tree** for Point-to-Hyperplane Nearest Neighbor Search. We use two state-of-the-art hyperplane hashing schemes [NH and FH](https://github.com/HuangQiang/P2HNNS) as baselines for systematic comparisons.
+In this github, we implement **Ball-Tree** and **BC-Tree** for Point-to-Hyperplane Nearest Neighbor Search. We choose two state-of-the-art hyperplane hashing schemes [NH and FH](https://github.com/HuangQiang/P2HNNS) as baselines for comparisons.
 
 ## Data Sets and Queries
 
-We choose 12 real-world data sets, i.e., Sift, UKBench, Tiny, Msong, NUSW, Cifar-10, Sun, LabelMe, Gist, Enron, Trevi, and P53, for performance evaluation. We follow [NH and FH](https://dl.acm.org/doi/abs/10.1145/3448016.3457240) and randomly generate 100 queries for each data set. The data sets and queries used in our experiments can be donwload [here](https://drive.google.com/drive/folders/1C9JWcMyTAUYYxM55FuMrPQ1dPJQ5vhsB?usp=sharing). Their statistics are summarized as follows.
+We study the performance of Ball-Tree and BC-Tree over 12 real-world data sets, i.e., Sift, UKBench, Tiny, Msong, NUSW, Cifar-10, Sun, LabelMe, Gist, Enron, Trevi, and P53. We follow [NH and FH](https://dl.acm.org/doi/abs/10.1145/3448016.3457240) and randomly generate 100 queries for each data set. The data sets and queries used in our experiments can be donwload [here](https://drive.google.com/drive/folders/1C9JWcMyTAUYYxM55FuMrPQ1dPJQ5vhsB?usp=sharing). Their statistics are summarized as follows.
 
 | Data Sets | # Data      | # Dim  | # Queries | Data Size | Data Type |
 | --------- | ----------- | ------ | --------- | --------- | --------- |
