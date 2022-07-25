@@ -4,10 +4,12 @@ In this github, we implement **Ball-Tree** and **BC-Tree** for Point-to-Hyperpla
 
 ## Data Sets and Queries
 
-We study the performance of Ball-Tree and BC-Tree over 12 real-world data sets, i.e., Sift, UKBench, Tiny, Msong, NUSW, Cifar-10, Sun, LabelMe, Gist, Enron, Trevi, and P53. We follow [NH and FH](https://dl.acm.org/doi/abs/10.1145/3448016.3457240) and randomly generate 100 queries for each data set. The data sets and queries used in our experiments can be donwload [here](https://drive.google.com/drive/folders/1C9JWcMyTAUYYxM55FuMrPQ1dPJQ5vhsB?usp=sharing). Their statistics are summarized as follows.
+We study the performance of Ball-Tree and BC-Tree over 16 real-world data sets, i.e., Music, GloVe, Sift, UKBench, Tiny, Msong, NUSW, Cifar-10, Sun, LabelMe, Gist, Enron, Trevi, P53, Deep100M, and Sift100M. We follow [NH and FH](https://dl.acm.org/doi/abs/10.1145/3448016.3457240) and randomly generate 100 queries for each data set. The data sets and queries used in our experiments can be donwload [here](https://drive.google.com/drive/folders/1C9JWcMyTAUYYxM55FuMrPQ1dPJQ5vhsB?usp=sharing). Their statistics are summarized as follows.
 
 | Data Sets | # Data      | # Dim  | # Queries | Data Size | Data Type |
 | --------- | ----------- | ------ | --------- | --------- | --------- |
+| Music     | 1,000,000   | 100    | 100       | 386 MB    | Rating    |
+| GloVe     | 1,183,514   | 100    | 100       | 460 MB    | Text      |
 | Sift      | 985,462     | 128    | 100       | 485 MB    | Image     |
 | UKBench   | 1,097,907   | 128    | 100       | 541 MB    | Image     |
 | Tiny      | 1,000,000   | 384    | 100       | 1.5 GB    | Image     |
@@ -20,6 +22,10 @@ We study the performance of Ball-Tree and BC-Tree over 12 real-world data sets, 
 | Enron     | 94,987      | 1,369  | 100       | 497 MB    | Text      |
 | Trevi     | 100,900     | 4,096  | 100       | 1.6 GB    | Image     |
 | P53       | 31,153      | 5,408  | 100       | 643 MB    | Biology   |
+| Deep100M  | 100,000,000 | 96     | 100       | 36.1 GB   | Image     |
+| Sift100M  | 99,986,452  | 128    | 100       | 48.0 GB   | Image     |
+
+Except for the link to download the data sets, we also enclose the program to generate the query and the source codes for data sets deduplication. Please refer to the fold `pre_process/` for more details.
 
 ## Compilation
 
@@ -35,6 +41,7 @@ sudo apt-get install gcc-8 (optional)
 Users can use the following commands to compile the C++ source codes:
 
 ```bash
+cd methods/
 make -j
 ```
 
@@ -43,6 +50,7 @@ make -j
 We provide the bash scripts to run all experiments. Once you have downloaded the data sets and queries and completed the compilation, you can reproduce the experiments by simply running the following commands:
 
 ```bash
+cd methods/
 bash run.sh
 ```
 
@@ -53,13 +61,15 @@ Finally, we privode python scripts for visualization. These scripts require `pyt
 After you have conducted all experiments, you can plot all the figures in our paper with the following commands.
 
 ```bash
+cd scripts/
 python3 plot.py
 ```
 
 or
 
 ```bash
+cd scripts/
 python plot.py
 ```
 
-Thank you for your interest!
+Thank you for your interest !
