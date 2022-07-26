@@ -41,7 +41,7 @@ opath=../results/${dname}/
 # done
 
 # FH
-for m in 8 16 32 64 128
+for m in 8 16 32 64 128 256
 do 
   for s in 1 2 4 8
   do
@@ -53,7 +53,7 @@ done
 
 # # NH (NH with LCCS-LSH)
 # w=0.1
-# for m in 8 16 32 64 128
+# for m in 8 16 32 64 128 256
 # do
 #   for s in 1 2 4 8
 #   do

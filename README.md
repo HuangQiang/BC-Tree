@@ -1,6 +1,6 @@
 # Lightweight-Yet-Efficient: Revitalizing Ball-Tree for Point-to-Hyperplane Nearest Neighbor Search
 
-In this github, we implement **Ball-Tree** and **BC-Tree** for Point-to-Hyperplane Nearest Neighbor Search. We choose two state-of-the-art hyperplane hashing schemes [NH and FH](https://github.com/HuangQiang/P2HNNS) as baselines for comparisons.
+In this repo, we implement **Ball-Tree** and **BC-Tree** for Point-to-Hyperplane Nearest Neighbor Search. We choose two state-of-the-art hyperplane hashing schemes [NH and FH](https://github.com/HuangQiang/P2HNNS) as baselines for comparisons.
 
 ## Data Sets and Queries
 
