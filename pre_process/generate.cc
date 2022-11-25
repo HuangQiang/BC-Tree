@@ -14,9 +14,8 @@
 #include <sys/types.h>
 #include <sys/time.h>
 
-//                      no limit         one-side limit   two-side limit
-const float  MIN_DIST = 0.000000001F; // 0.000000001F; // 0.00005F;
-const float  MAX_DIST = 1000000.0F;   // 0.1F;         // 0.1F;
+const float  MIN_DIST = 0.000000001F;
+const float  MAX_DIST = 1000000.0F;
 const float  MAX_NORM = 1.0F;
 const double PI       = 3.141592654;
 
@@ -242,7 +241,7 @@ float uniform(                      // r.v. from Uniform(min, max)
 
 // -----------------------------------------------------------------------------
 //  use Box-Muller to generate a random variable from Gaussian(mean, sigma)
-//  when mean = 0 and sigma = 1, it is standard Gaussian distr, i.e., Gaussian(0,1)
+//  when mean=0 and sigma=1, it is standard Gaussian distr, i.e., Gaussian(0,1)
 // -----------------------------------------------------------------------------
 float gaussian(                     // r.v. from N(mean, sigma)
     float mu,                           // mean (location)
