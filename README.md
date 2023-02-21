@@ -2,13 +2,11 @@
 
 Welcome to the **Ball-Tree and BC-Tree** GitHub!
 
-## Introduction
+In this repository, we target at solving the problem of **Point-to-Hyperplane Nearest Neighbor Search (P2HNNS)**. Given a set of data points in a ($d-1$)-dimensional Euclidean space and a hyperplane query (represented as a vector in $d$-dimensional Euclidean space), the problem of P2HNNS aims to find the point whose distance to the hyperplane query is minimized among all the data.
 
-In this repository, we target at solving the problem of **Point-to-Hyperplane Nearest Neighbor Search (P2HNNS)**. Given a set of data points in a (d-1)-dimensional Euclidean space and a hyperplane query (represented as a vector in d-dimensional Euclidean space), the problem of P2HNNS aims to find the point whose distance to the hyperplane query is minimized among all the data.
+This problem plays a vital role in many research domains. For example, in the applications of pool-based active learning with SVMs, the goal is to request labels for the data points closest (with minimum margin) to the SVM's decision hyperplane to reduce human efforts for annotation. Moreover, motivated by the success of SVM for classification, the maximum margin clustering aims at finding the hyperplane maximizing the minimum margin to the data, which can separate the data from different classes. Such applications require finding the data points that are closest to the hyperplane.
 
-This problem plays a vital role in many research domains. For example, in the applications of pool-based active learning with SVMs, the goal is to request labels for the data points closest (with minimum margin) to the SVM's decision hyperplane to reduce human efforts for annotation \cite{tong2001support}. Moreover, motivated by the success of SVM for classification, the maximum margin clustering aims at finding the hyperplane maximizing the minimum margin to the data, which can separate the data from different classes \cite{xu2004maximum, zhao2008efficient}. Such applications require finding the data points that are closest to the hyperplane.
-
-This repository provides the implementations and experiments of our work entitled [Lightweight-Yet-Efficient: Revitalizing Ball-Tree for Point-to-Hyperplane Nearest Neighbor Search](~) in [IEEE ICDE 2023](~). We implement **Ball-Tree** and **BC-Tree** for performing P2HNNS in high-dimensional spaces. To make a systematic comparison, we also include two state-of-the-art hyperplane hashing schemes [NH and FH](https://github.com/HuangQiang/P2HNNS) as baselines for evaluations.
+This repository provides the implementations and experiments of our work entitled [Lightweight-Yet-Efficient: Revitalizing Ball-Tree for Point-to-Hyperplane Nearest Neighbor Search](~) that has been accepted (1st cycle) and will be published in [IEEE ICDE 2023](https://icde2023.ics.uci.edu/). We implement **Ball-Tree** and **BC-Tree** for performing P2HNNS in high-dimensional spaces. To make a systematic comparison, we also include two state-of-the-art hyperplane hashing schemes [NH and FH](https://github.com/HuangQiang/P2HNNS) as baselines for evaluations.
 
 ## Data Sets
 
@@ -37,9 +35,9 @@ We study the performance of Ball-Tree and BC-Tree on 16 real-world data sets, i.
 
 ### Hyperplane Query Generation
 
-Different from [NH and FH](https://dl.acm.org/doi/abs/10.1145/3448016.3457240) that generate the hyperplane queries uniformly at random from a hypercube, we generate the hyperplane queries uniformly at random from a $d$-ball. We prefer this new way because it is more natural to simulate the hyperplane queries appeared in the actual applications. Please click [here](http://extremelearning.com.au/how-to-generate-uniformly-random-points-on-n-spheres-and-n-balls/) for more details about the concept of $d$-ball and its generation algorithm. The data sets and hyperplane queries used in our experiments can be donwload [here](https://drive.google.com/drive/folders/1C9JWcMyTAUYYxM55FuMrPQ1dPJQ5vhsB?usp=sharing).
+Different from [NH and FH](https://dl.acm.org/doi/abs/10.1145/3448016.3457240) that generate the hyperplane queries uniformly at random from a hypercube, we generate the hyperplane queries uniformly at random from a $d$-ball. We prefer this new way because it is more natural to simulate the hyperplane queries appeared in real-world applications. Please click [here](http://extremelearning.com.au/how-to-generate-uniformly-random-points-on-n-spheres-and-n-balls/) for more details about the $d$-ball and its generation algorithm. The data sets and hyperplane queries used in our experiments can be donwload [here](https://drive.google.com/drive/folders/1C9JWcMyTAUYYxM55FuMrPQ1dPJQ5vhsB?usp=sharing).
 
-Except for the link to download the data sets and hyperplane queries, we also enclose the sourece codes to generate the hyperplane query and the source codes for data sets deduplication, so that users can conduct experiemnts on any data sets of interests. Please refer to the fold `pre_process/` for more details.
+Except for the link to download the data sets and hyperplane queries, we have also enclosed the sourece codes to generate the hyperplane query and the source codes for data sets deduplication, so that users can conduct experiemnts on any data sets of interests. Please refer to the fold `pre_process/` for more details.
 
 ### Data Format
 
@@ -109,4 +107,4 @@ Thank you so much for being patient to read the user manual. We will appreciate 
 }
 ```
 
-It is welcome to contact me (huangq@comp.nus.edu.sg) if you meet any issue. Thank you for your interest !
+It is welcome to contact me (huangq@comp.nus.edu.sg) if you meet any issue. Thank you for your interest!
