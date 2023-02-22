@@ -96,7 +96,7 @@ python plot.py
 
 ## Reference
 
-Thank you so much for being patient to read the user manual. We will appreciate using the following BibTeX to cite this work when you use SAH in your paper.
+Thank you for being patient in reading the user manual. We will appreciate using the following BibTeX to cite this work when you use the source codes in your paper.
 
 ```tex
 @inproceedings{huang2023lightweight,
