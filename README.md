@@ -6,7 +6,7 @@ In this repository, we target at solving the problem of **Point-to-Hyperplane Ne
 
 This problem plays a vital role in many research domains. For example, in the applications of pool-based active learning with SVMs, the goal is to request labels for the data points closest (with minimum margin) to the SVM's decision hyperplane to reduce human efforts for annotation. Moreover, motivated by the success of SVM for classification, the maximum margin clustering aims at finding the hyperplane maximizing the minimum margin to the data, which can separate the data from different classes. Such applications require finding the data points that are closest to the hyperplane.
 
-This repository provides the implementations and experiments of our work entitled [Lightweight-Yet-Efficient: Revitalizing Ball-Tree for Point-to-Hyperplane Nearest Neighbor Search](https://arxiv.org/abs/2302.10626) that has been accepted (1st cycle) and will be published in [IEEE ICDE 2023](https://icde2023.ics.uci.edu/). We implement **Ball-Tree** and **BC-Tree** for performing P2HNNS in high-dimensional spaces. To make a systematic comparison, we also include two state-of-the-art hyperplane hashing schemes [NH and FH](https://github.com/HuangQiang/P2HNNS) as baselines for evaluations.
+This repository provides the implementations and experiments of our work entitled Lightweight-Yet-Efficient: Revitalizing Ball-Tree for Point-to-Hyperplane Nearest Neighbor Search that has been accepted (1st cycle) and published in [IEEE ICDE 2023]((https://ieeexplore.ieee.org/document/10184516)). You could also find our arXiv version [here](https://arxiv.org/abs/2302.10626). We implement **Ball-Tree** and **BC-Tree** for performing P2HNNS in high-dimensional spaces. To make a systematic comparison, we include two state-of-the-art hyperplane hashing schemes **NH** and **FH** (published in [SIGMOD 2021](https://dl.acm.org/doi/abs/10.1145/3448016.3457240)) as baselines for evaluations, where their implementation codes can be found [here](https://github.com/HuangQiang/P2HNNS).
 
 ## Data Sets
 
@@ -96,15 +96,17 @@ python plot.py
 
 ## Reference
 
-Thank you for being patient in reading the user manual. We will appreciate using the following BibTeX to cite this work when you use the source codes in your paper.
+Thank you for being patient in reading the user manual. We will appreciate using the following BibTeX to cite this work when you use these source codes in your paper.
 
-```tex
+```bibtex
 @inproceedings{huang2023lightweight,
   title={Lightweight-Yet-Efficient: Revitalizing Ball-Tree for Point-to-Hyperplane Nearest Neighbor Search},
   author={Huang, Qiang and Tung, Anthony K. H.},
   booktitle={2023 IEEE 39th International Conference on Data Engineering (ICDE)},
-  year={2023}
+  pages={436--449},
+  year={2023},
+  organization={IEEE}
 }
 ```
 
-It is welcome to contact me (huangq@comp.nus.edu.sg) if you meet any issue. Thank you for your interest!
+It is welcome to contact me (<huangq@comp.nus.edu.sg>) if you meet any issue. Thank you for your interest!
